@@ -1,0 +1,179 @@
+<!-- Сайт розроблено студентом Литвиненко Ілля, група ФІТ-2-11-->
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страхова компанія "Надія"</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            background-color: #f0f4f8;
+        }
+        header, footer {
+            background-color: #003366;
+            color: #fff;
+            text-align: center;
+            padding: 1.5em 1em;
+        }
+        nav {
+            background-color: #005b99;
+            text-align: center;
+            padding: 1em;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        section {
+            padding: 3em 1em;
+            background-color: #ffffff;
+            margin: 1em auto;
+            border-radius: 12px;
+            max-width: 900px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #003366;
+        }
+        ul {
+            list-style-type: disc;
+            padding-left: 1.5em;
+        }
+        .calculator input, .calculator select {
+            padding: 8px;
+            margin: 5px 0;
+            width: 100%;
+            max-width: 300px;
+            display: block;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #005b99;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #003366;
+        }
+        .result {
+            margin-top: 15px;
+            font-size: 1.2em;
+            color: #007700;
+        }
+        .container {
+            padding: 0 1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Страхова компанія "Надія"</h1>
+        <p>Виконав: Литвиненко Ілля, ФІТ-2-11</p>
+    </header>
+
+    <nav>
+        <a href="#home">Головна</a>
+        <a href="#services">Послуги</a>
+        <a href="#calculator">Калькулятор</a>
+        <a href="#about">Про нас</a>
+        <a href="#contacts">Контакти</a>
+    </nav>
+
+    <section id="home" class="container">
+        <h2>Ласкаво просимо!</h2>
+        <p>Ми допоможемо вам застрахувати автомобіль, майно або життя швидко та зручно.</p>
+    </section>
+
+    <section id="services" class="container">
+        <h2>Наші послуги</h2>
+        <ul>
+            <li>Автострахування — захист вашого автомобіля від усіх ризиків.</li>
+            <li>Страхування життя — підтримка у складні моменти для ваших близьких.</li>
+            <li>Страхування нерухомості — безпека вашого будинку або квартири.</li>
+        </ul>
+    </section>
+
+    <section id="calculator" class="container">
+        <h2>Калькулятор страхового поліса</h2>
+        <div class="calculator">
+            <label>Тип страхування:
+                <select id="type">
+                    <option value="auto">Авто</option>
+                    <option value="life">Життя</option>
+                    <option value="property">Майно</option>
+                </select>
+            </label>
+            <label>Сума страхування (грн):
+                <input type="number" id="amount" min="10000" step="1000" placeholder="Наприклад, 50000">
+            </label>
+            <label>Термін страхування (років):
+                <input type="number" id="years" min="1" max="5" placeholder="Від 1 до 5">
+            </label>
+            <button onclick="calculateInsurance()">Розрахувати</button>
+            <div class="result" id="result"></div>
+        </div>
+    </section>
+
+    <section id="about" class="container">
+        <h2>Про компанію</h2>
+        <p>Компанія "Надія" працює на ринку страхування понад 15 років. Ми гарантуємо надійність, індивідуальний підхід та швидке оформлення полісів. Наші фахівці готові допомогти вам у будь-якій ситуації.</p>
+    </section>
+
+    <section id="contacts" class="container">
+        <h2>Контакти</h2>
+        <p>Email: <a href="mailto:info@nadia-insurance.ua">info@nadia-insurance.ua</a><br>
+        Телефон: +38 (044) 123-45-67<br>
+        Адреса: м. Київ, вул. Надійна, 10</p>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2539.178187635367!2d30.516818!3d50.445207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce5650b07e43%3A0x5d0f29610c58e65a!2z0LLRg9C70LjRhtGPINCa0LDQvdC60L7QuSDRgdCw0L3RltC60LAsIDEwLCDQmtC40ZfQsiwg0KPQutGA0LDQuNC90LAsIDA0MDAw!5e0!3m2!1suk!2sua!4v1717930012345!5m2!1suk!2sua" width="100%" height="300" style="border:0; border-radius:12px; margin-top:1em;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Страхова компанія "Надія" | Литвиненко Ілля, ФІТ-2-11</p>
+    </footer>
+
+    <script>
+        function calculateInsurance() {
+            const type = document.getElementById("type").value;
+            const amount = parseFloat(document.getElementById("amount").value);
+            const years = parseInt(document.getElementById("years").value);
+            const resultDiv = document.getElementById("result");
+
+            if (isNaN(amount) || isNaN(years) || amount <= 0 || years <= 0) {
+                resultDiv.innerHTML = "<span style='color:red;'>Будь ласка, введіть коректні дані.</span>";
+                return;
+            }
+
+            let rate;
+            switch(type) {
+                case "auto": rate = 0.03; break;
+                case "life": rate = 0.05; break;
+                case "property": rate = 0.04; break;
+            }
+
+            const total = amount * rate * years;
+            resultDiv.innerHTML = `<span>Орієнтовна вартість поліса: <strong>${total.toFixed(2)} грн</strong></span>`;
+        }
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute("href").substring(1);
+                document.getElementById(targetId).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
